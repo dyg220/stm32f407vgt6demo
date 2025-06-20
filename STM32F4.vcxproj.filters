@@ -1,0 +1,463 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="User\inc\main.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Library\STM32F4xx_StdPeriph_Driver\inc\misc.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Library\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_adc.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Library\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_can.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Library\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_cec.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Library\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_crc.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Library\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_cryp.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Library\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dac.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Library\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dbgmcu.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Library\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dcmi.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Library\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dfsdm.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Library\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dma.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Library\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dma2d.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Library\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dsi.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Library\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_exti.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Library\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_flash.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Library\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_flash_ramfunc.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Library\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_fmc.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Library\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_fmpi2c.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Library\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_fsmc.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Library\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_gpio.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Library\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_hash.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Library\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_i2c.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Library\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_iwdg.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Library\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_lptim.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Library\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_ltdc.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Library\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_pwr.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Library\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_qspi.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Library\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_rcc.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Library\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_rng.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Library\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_rtc.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Library\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_sai.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Library\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_sdio.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Library\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_spdifrx.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Library\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_spi.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Library\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_syscfg.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Library\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_tim.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Library\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_usart.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Library\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_wwdg.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Cmsis\core_cm4.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Cmsis\core_cmFunc.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Cmsis\core_cmInstr.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Cmsis\core_cmSimd.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Cmsis\stm32f4xx.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Cmsis\stm32f4xx_conf.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Cmsis\stm32f4xx_it.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Cmsis\system_stm32f4xx.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="User\inc\led.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Cmsis\io_bit.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="User\inc\adc.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="User\inc\at24c02.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="User\inc\breathe.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="User\inc\exti.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="User\inc\frequency.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="User\inc\function.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="User\inc\iic.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="User\inc\iwdg.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="User\inc\keytime.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="User\inc\nvic.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="User\inc\rgb.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="User\inc\rng.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="User\inc\sg90.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="User\inc\tim6.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="User\inc\tim7.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="User\inc\ultrasonic.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="User\inc\usart1.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="User\inc\wwdg.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="User\inc\spi.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="User\inc\w25q64.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="User\src\main.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Library\STM32F4xx_StdPeriph_Driver\src\misc.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Library\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_adc.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Library\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_can.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Library\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_cec.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Library\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_crc.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Library\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_cryp.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Library\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_cryp_aes.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Library\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_cryp_des.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Library\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_cryp_tdes.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Library\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_dac.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Library\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_dbgmcu.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Library\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_dcmi.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Library\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_dfsdm.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Library\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_dma.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Library\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_dma2d.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Library\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_dsi.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Library\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_exti.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Library\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_flash.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Library\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_flash_ramfunc.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Library\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_fmc.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Library\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_fmpi2c.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Library\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_fsmc.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Library\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_gpio.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Library\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_hash.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Library\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_hash_md5.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Library\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_hash_sha1.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Library\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_i2c.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Library\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_iwdg.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Library\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_lptim.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Library\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_ltdc.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Library\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_pwr.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Library\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_qspi.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Library\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_rcc.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Library\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_rng.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Library\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_rtc.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Library\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_sai.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Library\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_sdio.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Library\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_spdifrx.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Library\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_spi.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Library\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_syscfg.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Library\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_tim.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Library\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_usart.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Library\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_wwdg.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Cmsis\stm32f4xx_it.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Cmsis\system_stm32f4xx.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="User\src\led.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="User\inc\delay.h">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="User\src\delay.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="User\src\beep.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="User\inc\beep.h">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="User\inc\fire.h">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="User\src\fire.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="User\inc\key.h">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="User\src\key.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="User\inc\uart1.h">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="User\src\adc.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="User\src\at24c02.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="User\src\breathe.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="User\src\exti.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="User\src\frequency.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="User\src\function.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="User\src\iic.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="User\src\iwdg.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="User\src\keytime.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="User\src\nvic.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="User\src\rgb.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="User\src\rng.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="User\src\sg90.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="User\src\tim6.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="User\src\tim7.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="User\src\ultrasonic.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="User\src\usart1.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="User\src\wwdg.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="User\src\spi.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="User\src\w25q64.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="keilkill.bat">
+      <Filter>源文件</Filter>
+    </None>
+    <None Include="Library\STM32F4xx_StdPeriph_Driver\Release_Notes.html" />
+    <None Include="Cmsis\startup_stm32f40xx.s" />
+  </ItemGroup>
+</Project>
