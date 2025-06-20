@@ -1,2 +1,5 @@
-./vs
+/./vs
 /.vs/STM32F4
+/Project/DebugConfig
+/Project/Listings
+/Project/Objects
