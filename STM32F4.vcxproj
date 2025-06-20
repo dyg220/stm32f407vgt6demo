@@ -63,7 +63,7 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <NMakePreprocessorDefinitions>__arm__;__cplusplus;__CC_ARM;__GNUC__;STM32F40_41xxx;USE_STDPERIPH_DRIVER</NMakePreprocessorDefinitions>
+    <NMakePreprocessorDefinitions>__arm__;__CC_ARM;__GNUC__;STM32F40_41xxx;USE_STDPERIPH_DRIVER</NMakePreprocessorDefinitions>
     <NMakeIncludeSearchPath>C:\Keil_v5\ARM\ARMCC\include;C:\stm32_work\0_STM32F407VG_Demo\Cmsis;C:\stm32_work\0_STM32F407VG_Demo\Library\STM32F4xx_StdPeriph_Driver\inc;C:\stm32_work\0_STM32F407VG_Demo\User\inc</NMakeIncludeSearchPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">

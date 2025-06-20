@@ -8,7 +8,7 @@
  **************************************************************/
 void AT24C02_Init(void)
 {
-    IIC_GPIO_Init();
+	IIC_GPIO_Init();
 }
 
 /**************************************************************
@@ -19,26 +19,26 @@ void AT24C02_Init(void)
  **************************************************************/
 u8 AT24C02_WriteByte(u8 addr, u8 data)
 {
-    IIC_Start();                       // 起始条件
-    if (IIC_SendByte(Addr_Write) != 0) // 发送器件地址写
-    {
-        IIC_Stop(); // 发送停止条件
-        return 1;
-    }
-    if (IIC_SendByte(addr) != 0) // 发送字地址（往哪写）
-    {
-        IIC_Stop(); // 发送停止条件
-        return 2;
-    }
-    if (IIC_SendByte(data) != 0) // 发送数据（写什么）
-    {
-        IIC_Stop(); // 发送停止条件
-        return 3;
-    }
-    IIC_Stop(); // 发送停止条件
+	IIC_Start();                       // 起始条件
+	if (IIC_SendByte(Addr_Write) != 0) // 发送器件地址写
+	{
+		IIC_Stop(); // 发送停止条件
+		return 1;
+	}
+	if (IIC_SendByte(addr) != 0) // 发送字地址（往哪写）
+	{
+		IIC_Stop(); // 发送停止条件
+		return 2;
+	}
+	if (IIC_SendByte(data) != 0) // 发送数据（写什么）
+	{
+		IIC_Stop(); // 发送停止条件
+		return 3;
+	}
+	IIC_Stop(); // 发送停止条件
 
-    delay_ms(5); // 等待写周期
-    return 0;
+	delay_ms(5); // 等待写周期
+	return 0;
 }
 
 /**************************************************************
@@ -47,38 +47,38 @@ u8 AT24C02_WriteByte(u8 addr, u8 data)
  *返 回 值：0  读取一个字节成功    1  2 发送失败   3  读取失败
  *备    注：
  **************************************************************/
-u8 AT24C02_ReadByte(u8 addr, u8 *data)
+u8 AT24C02_ReadByte(u8 addr, u8* data)
 {
-    // 1、发送起始条件
-    IIC_Start();
+	// 1、发送起始条件
+	IIC_Start();
 
-    // 2、发送器件地址写
-    if (IIC_SendByte(Addr_Write) != 0) // 发送器件地址写
-    {
-        IIC_Stop(); // 发送停止条件
-        return 1;
-    }
+	// 2、发送器件地址写
+	if (IIC_SendByte(Addr_Write) != 0) // 发送器件地址写
+	{
+		IIC_Stop(); // 发送停止条件
+		return 1;
+	}
 
-    // 3、发送字地址（从哪读）
-    if (IIC_SendByte(addr) != 0) // 发送字地址（往哪读）
-    {
-        IIC_Stop(); // 发送停止条件
-        return 2;
-    }
+	// 3、发送字地址（从哪读）
+	if (IIC_SendByte(addr) != 0) // 发送字地址（往哪读）
+	{
+		IIC_Stop(); // 发送停止条件
+		return 2;
+	}
 
-    // 4、发送重复起始条件
-    IIC_Start();
+	// 4、发送重复起始条件
+	IIC_Start();
 
-    // 5、发送器件地址读
-    if (IIC_SendByte(Addr_Read) != 0) // 发送器件地址读
-    {
-        IIC_Stop(); // 发送停止条件
-        return 3;
-    }
-    // 6、主机读取数据
-    *data = IIC_RecvByte(NO_ACK);
-    // 7、发送停止条件
-    IIC_Stop();
+	// 5、发送器件地址读
+	if (IIC_SendByte(Addr_Read) != 0) // 发送器件地址读
+	{
+		IIC_Stop(); // 发送停止条件
+		return 3;
+	}
+	// 6、主机读取数据
+	*data = IIC_RecvByte(NO_ACK);
+	// 7、发送停止条件
+	IIC_Stop();
 
-    return 0;
+	return 0;
 }
