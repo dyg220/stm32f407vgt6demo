@@ -45,11 +45,11 @@ int main(void)
 		key_num = Key_Scan();
 		if (key_num == key3_click)
 		{
-			/*num = Read_RNG(0, 14);
-			printf("%s\r\n", name[num]);*/
-			DMA2_USART_TDATA((u32)&USART1->DR, (u32)send, sizeof(send));
-			delay_ms(200);
-			printf("NDTR: %d\r\n", DMA2_Stream7->NDTR);
+			num = Read_RNG(0, 14);
+			printf("%s\r\n", name[num]);
+			//DMA2_USART_TDATA((u32)&USART1->DR, (u32)send, sizeof(send));
+			//delay_ms(200);
+			//printf("NDTR: %d\r\n", DMA2_Stream7->NDTR);
 		}
 		RECV_USART1();  //也可以接收数据
 	}

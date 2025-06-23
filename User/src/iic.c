@@ -8,16 +8,16 @@
  **************************************************************/
 void IIC_GPIO_Init(void)
 {
-    // 打开时钟
-    RCC->AHB1ENR |= (1 << 1);
+	// 打开时钟
+	RCC->AHB1ENR |= (1 << 1);
 
-    GPIOB->MODER &= ~(0xf << 12);
-    GPIOB->MODER |= (5 << 12);      // 通用输出模式
-    GPIOB->OTYPER |= (3 << 6);      // 开漏输出
-    GPIOB->OSPEEDR &= ~(0xf << 12); // 低速
+	GPIOB->MODER &= ~(0xf << 12);
+	GPIOB->MODER |= (5 << 12);      // 通用输出模式
+	GPIOB->OTYPER |= (3 << 6);      // 开漏输出
+	GPIOB->OSPEEDR &= ~(0xf << 12); // 低速
 
-    IIC_SDA_H;
-    IIC_SCL_H;
+	IIC_SDA_H;
+	IIC_SCL_H;
 }
 
 /**************************************************************
@@ -28,16 +28,16 @@ void IIC_GPIO_Init(void)
  **************************************************************/
 void IIC_Start(void)
 {
-    IIC_SCL_L; // 使数据线变化作准备
-    delay_us(5);
-    IIC_SDA_H; // 为数据线下降沿作准备
+	IIC_SCL_L; // 使数据线变化作准备
+	delay_us(5);
+	IIC_SDA_H; // 为数据线下降沿作准备
 
-    IIC_SCL_H; // 时钟线高电平
-    delay_us(5);
-    IIC_SDA_L; // 数据线下降沿
-    delay_us(5);
+	IIC_SCL_H; // 时钟线高电平
+	delay_us(5);
+	IIC_SDA_L; // 数据线下降沿
+	delay_us(5);
 
-    IIC_SCL_L; // 作为安全作用
+	IIC_SCL_L; // 作为安全作用
 }
 
 /**************************************************************
@@ -45,32 +45,32 @@ void IIC_Start(void)
 *参    数：None
 *返 回 值：None
 *备    注： 时钟线为低电平，发送方发送数据
-            时钟线为高电平，接收方接收数据
+			时钟线为高电平，接收方接收数据
 **************************************************************/
 u8 IIC_SendByte(u8 Byte)
 {
-    u8 i, ack = 0;
-    for (i = 0; i < 8; i++)
-    {
-        IIC_SCL_L; // 使数据线变化作准备
-        delay_us(3);
-        if (Byte & (0x80 >> i))
-        {
-            IIC_SDA_H;
-        }
-        else
-        {
-            IIC_SDA_L;
-        }
-        delay_us(2);
-        IIC_SCL_H;   // 为从机读数据作准备
-        delay_us(5); // 从机读应答信号
-    }
+	u8 i, ack = 0;
+	for (i = 0; i < 8; i++)
+	{
+		IIC_SCL_L; // 使数据线变化作准备
+		delay_us(3);
+		if (Byte & (0x80 >> i))
+		{
+			IIC_SDA_H;
+		}
+		else
+		{
+			IIC_SDA_L;
+		}
+		delay_us(2);
+		IIC_SCL_H;   // 为从机读数据作准备
+		delay_us(5); // 从机读应答信号
+	}
 
-    ack = IIC_RecvAck();
+	ack = IIC_RecvAck();
 
-    IIC_SCL_L; // 作为安全作用
-    return ack;
+	IIC_SCL_L; // 作为安全作用
+	return ack;
 }
 
 /**************************************************************
@@ -78,31 +78,31 @@ u8 IIC_SendByte(u8 Byte)
 *参    数：None
 *返 回 值：None
 *备    注： 时钟线为低电平，发送方发送数据
-            时钟线为高电平，接收方接收数据
+			时钟线为高电平，接收方接收数据
 **************************************************************/
 u8 IIC_RecvByte(u8 ack)
 {
-    u8 i, Byte = 0;
-    IIC_SCL_L; // 使数据线变化作准备
-    IIC_SDA_H; // 主机拉高数据线，数据线控制权交给从机
+	u8 i, Byte = 0;
+	IIC_SCL_L; // 使数据线变化作准备
+	IIC_SDA_H; // 主机拉高数据线，数据线控制权交给从机
 
-    for (i = 0; i < 8; i++)
-    {
-        IIC_SCL_L;   // 为从机发送数据作准备
-        delay_us(5); // 从机在发送数据
+	for (i = 0; i < 8; i++)
+	{
+		IIC_SCL_L;   // 为从机发送数据作准备
+		delay_us(5); // 从机在发送数据
 
-        IIC_SCL_H; // 为主机读取数据作准备
-        Byte = Byte << 1;
-        delay_us(5);
-        if (IIC_SDA_R)
-        {
-            Byte |= 0x01; // 接受到为数据1
-        }
-    }
+		IIC_SCL_H; // 为主机读取数据作准备
+		Byte = Byte << 1;
+		delay_us(5);
+		if (IIC_SDA_R)
+		{
+			Byte |= 0x01; // 接受到为数据1
+		}
+	}
 
-    IIC_SendAck(ack);
-    IIC_SCL_L; // 作为安全作用
-    return Byte;
+	IIC_SendAck(ack);
+	IIC_SCL_L; // 作为安全作用
+	return Byte;
 }
 
 /**************************************************************
@@ -110,25 +110,25 @@ u8 IIC_RecvByte(u8 ack)
 *参    数：None
 *返 回 值：None
 *备    注：应答：第九个脉冲，时钟线为高电平时数据线保持低电平
-           非应答：第九个脉冲，时钟线为高电平时数据线保持高电平
+		   非应答：第九个脉冲，时钟线为高电平时数据线保持高电平
 **************************************************************/
 void IIC_SendAck(u8 ack)
 {
-    IIC_SCL_L; // 使数据线变化作准备
-    delay_us(3);
-    if (ack == ACK) // 应答
-    {
-        IIC_SDA_L;
-    }
-    else // 非应答
-    {
-        IIC_SDA_H;
-    }
-    delay_us(2);
+	IIC_SCL_L; // 使数据线变化作准备
+	delay_us(3);
+	if (ack == ACK) // 应答
+	{
+		IIC_SDA_L;
+	}
+	else // 非应答
+	{
+		IIC_SDA_H;
+	}
+	delay_us(2);
 
-    IIC_SCL_H;   // 为从机读数据作准备
-    delay_us(5); // 从机读应答信号
-    IIC_SCL_L;   // 作为安全作用
+	IIC_SCL_H;   // 为从机读数据作准备
+	delay_us(5); // 从机读应答信号
+	IIC_SCL_L;   // 作为安全作用
 }
 
 /**************************************************************
@@ -136,30 +136,30 @@ void IIC_SendAck(u8 ack)
 *参    数：None
 *返 回 值：None
 *备    注：应答：第九个脉冲，时钟线为高电平时数据线保持低电平
-           非应答：第九个脉冲，时钟线为高电平时数据线保持高电平
+		   非应答：第九个脉冲，时钟线为高电平时数据线保持高电平
 **************************************************************/
 u8 IIC_RecvAck(void)
 {
-    u8 ack;
-    IIC_SCL_L; // 使数据线变化作准备
-    IIC_SDA_H; // 主机拉高数据线，数据线控制权交给从机
+	u8 ack;
+	IIC_SCL_L; // 使数据线变化作准备
+	IIC_SDA_H; // 主机拉高数据线，数据线控制权交给从机
 
-    delay_us(5); // 数据线被从机改变
+	delay_us(5); // 数据线被从机改变
 
-    IIC_SCL_H; // 为主机读创造条件
-    delay_us(5);
-    if (IIC_SDA_R)
-    {
-        ack = NO_ACK;
-    }
-    else
-    {
-        ack = ACK;
-    }
+	IIC_SCL_H; // 为主机读创造条件
+	delay_us(5);
+	if (IIC_SDA_R)
+	{
+		ack = NO_ACK;
+	}
+	else
+	{
+		ack = ACK;
+	}
 
-    IIC_SCL_L; // 作为安全作用
+	IIC_SCL_L; // 作为安全作用
 
-    return ack;
+	return ack;
 }
 
 /**************************************************************
@@ -170,13 +170,13 @@ u8 IIC_RecvAck(void)
  **************************************************************/
 void IIC_Stop(void)
 {
-    IIC_SCL_L; // 使数据线变化作准备
-    delay_us(5);
+	IIC_SCL_L; // 使数据线变化作准备
+	delay_us(5);
 
-    IIC_SDA_L; // 为数据线上升沿作准备
+	IIC_SDA_L; // 为数据线上升沿作准备
 
-    IIC_SCL_H; // 时钟线高电平
-    delay_us(5);
-    IIC_SDA_H; // 数据线上升沿
-    delay_us(5);
+	IIC_SCL_H; // 时钟线高电平
+	delay_us(5);
+	IIC_SDA_H; // 数据线上升沿
+	delay_us(5);
 }

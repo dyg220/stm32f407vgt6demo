@@ -23,7 +23,7 @@ void DMA2_USART_TDATA(u32 p_addr, u32 m_addr, u32 ndtr) {
 	DMA2_Stream7->NDTR = ndtr; //传输次数
 	DMA2_Stream7->PAR = p_addr;  //外设地址
 	DMA2_Stream7->M0AR = m_addr; //存储器地址
-	printf("NDTR: %d \r\n", DMA2_Stream7->NDTR);
+	//printf("NDTR: %d \r\n", DMA2_Stream7->NDTR);
 
 	DMA2_Stream7->FCR &= ~(1 << 2); //FIFO模式关闭,使能直接模式
 	USART1->CR3 |= (1 << 7); //使能DMA接收
