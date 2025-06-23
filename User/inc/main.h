@@ -25,6 +25,7 @@
 #include "iic.h"
 #include "at24c02.h"
 #include "w25q64.h"
+#include "dma.h"
 
 //#include <string.h>
 //#include <stdlib.h>

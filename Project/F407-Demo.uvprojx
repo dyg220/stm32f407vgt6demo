@@ -752,6 +752,11 @@
               <FileType>1</FileType>
               <FilePath>..\User\src\w25q64.c</FilePath>
             </File>
+            <File>
+              <FileName>dma.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\User\src\dma.c</FilePath>
+            </File>
           </Files>
         </Group>
       </Groups>

@@ -222,6 +222,9 @@
     <ClInclude Include="User\inc\w25q64.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="User\inc\dma.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="User\src\main.c">
@@ -450,6 +453,9 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="User\src\w25q64.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="User\src\dma.c">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

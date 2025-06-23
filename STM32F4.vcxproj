@@ -128,6 +128,7 @@
     <ClInclude Include="User\inc\adc.h" />
     <ClInclude Include="User\inc\at24c02.h" />
     <ClInclude Include="User\inc\breathe.h" />
+    <ClInclude Include="User\inc\dma.h" />
     <ClInclude Include="User\inc\exti.h" />
     <ClInclude Include="User\inc\frequency.h" />
     <ClInclude Include="User\inc\function.h" />
@@ -196,6 +197,7 @@
     <ClCompile Include="Library\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_wwdg.c" />
     <ClCompile Include="User\inc\beep.h" />
     <ClCompile Include="User\inc\delay.h" />
+    <ClCompile Include="User\src\dma.c" />
     <ClCompile Include="User\inc\fire.h" />
     <ClCompile Include="User\inc\key.h" />
     <ClCompile Include="User\inc\uart1.h" />
