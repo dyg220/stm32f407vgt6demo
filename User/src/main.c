@@ -40,7 +40,6 @@ int main(void)
 		printf("0x%x  ", recv[i]);
 	}*/
 	//GPIO_ResetBits(GPIOC, GPIO_Pin_4);
-	u32 i = 0;
 	while (1)
 	{
 		key_num = Key_Scan();
