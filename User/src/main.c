@@ -39,16 +39,17 @@ int main(void)
 	{
 		printf("0x%x  ", recv[i]);
 	}*/
-
+	//GPIO_ResetBits(GPIOC, GPIO_Pin_4);
+	u32 i = 0;
 	while (1)
 	{
 		key_num = Key_Scan();
 		if (key_num == key3_click)
 		{
-			num = Read_RNG(0, 14);
-			printf("%s\r\n", name[num]);
-			//DMA2_USART_TDATA((u32)&USART1->DR, (u32)send, sizeof(send));
-			//delay_ms(200);
+			//num = Read_RNG(0, 14);
+			//printf("%s\r\n", name[num]);
+			DMA2_USART_TDATA((u32)&USART1->DR, (u32)send, sizeof(send));
+			delay_ms(200);
 			//printf("NDTR: %d\r\n", DMA2_Stream7->NDTR);
 		}
 		RECV_USART1();  //也可以接收数据

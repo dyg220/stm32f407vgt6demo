@@ -16,6 +16,9 @@ void Write_Status(u8 data);
 void W25Q64_Read_Bytes(u32 addr, u32 len, u8* buf);
 void W25Q64_Write_Page(u32 addr, u32 len, u8* buf);
 void W25Q64_Sector_Erase(u32 addr);
+void W25Q64_Write_Pages(u32 addr, u32 len, u8* buf);
+void W25Q64_block_Erase(u32 addr);
+void W25Q64_Chip_Erase(void);
 
 #endif
 

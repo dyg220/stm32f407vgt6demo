@@ -131,8 +131,35 @@ void W25Q64_Write_Page(u32 addr, u32 len, u8* buf)
 **************************************************************/
 void W25Q64_Write_Pages(u32 addr, u32 len, u8* buf)
 {
+	u32 remain = 0;
+	remain = 256 - (addr % 256);//当前页剩余的可写字节数
+	if (len <= remain)
+	{
+		W25Q64_Write_Page(addr, len, buf);
+		return;
+	}
+	else
+	{
+		//把当前页写满
+		W25Q64_Write_Page(addr, remain, buf);
+		addr = addr + remain;//存储空间的地址偏移
+		buf = buf + remain;//数据地址的偏移
+		len = len - remain;//剩余数据长度
 
-
+		//剩余的数据长度大于等于8
+		while (len >= 256)
+		{
+			W25Q64_Write_Page(addr, 256, buf);
+			addr = addr + 256;//存储空间的地址偏移
+			buf = buf + 256;//数据地址的偏移
+			len = len - 256;//剩余数据长度
+		}
+		//剩余数据一定小于8，可能为0
+		if (len != 0)
+		{
+			W25Q64_Write_Page(addr, len, buf);
+		}
+	}
 }
 
 
@@ -156,7 +183,40 @@ void W25Q64_Sector_Erase(u32 addr)
 	while (Read_Status() & (1 << 0));//等待BUSY变0
 }
 
+/**************************************************************
+*函数功能：块区擦除函数
+*参    数：addr 从哪开始擦除
+*返 回 值：None
+*备    注：0xd8
+**************************************************************/
+void W25Q64_block_Erase(u32 addr)
+{
+	//写使能
+	Write_Enable();
+	W25Q64_CS_L;
+	SPI_TransferByte(0xd8);
+	SPI_TransferByte(addr >> 16);
+	SPI_TransferByte(addr >> 8);
+	SPI_TransferByte(addr);
+	W25Q64_CS_H;
+	while (Read_Status() & (1 << 0));//等待BUSY变0
+}
 
+/**************************************************************
+*函数功能：芯片擦除函数
+*参    数：None
+*返 回 值：None
+*备    注：0xC7
+**************************************************************/
+void W25Q64_Chip_Erase(void)
+{
+	//写使能
+	Write_Enable();
+	W25Q64_CS_L;
+	SPI_TransferByte(0xC7);
+	W25Q64_CS_H;
+	while (Read_Status() & (1 << 0));//等待BUSY变0
+}
 
 
 

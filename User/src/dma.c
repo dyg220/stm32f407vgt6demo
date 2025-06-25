@@ -12,9 +12,9 @@ void DMA2_USART_TDATA(u32 p_addr, u32 m_addr, u32 ndtr) {
 	DMA2_Stream7->CR |= (4 << 25);	// 选择DMA2_Stream7_CHSEL为4（USART2）
 	DMA2_Stream7->CR &= ~(3 << 16); //优先级为低
 	DMA2_Stream7->CR &= ~(1 << 9);	//外设地址固定
-	DMA2_Stream7->CR &= ~(3 << 11);  //外设数据增量1byte
-	DMA2_Stream7->CR |= (1 << 10);	//存储器地址递增
-	DMA2_Stream7->CR &= ~(3 << 13); //存储器数据增量1Byte
+	DMA2_Stream7->CR &= ~(3 << 11);  //PSIZE:外设数据增量1byte
+	DMA2_Stream7->CR |= (1 << 10);	//存储器地址递增,增量为MSIZE
+	DMA2_Stream7->CR &= ~(3 << 13); //MSIZE:存储器数据增量1Byte
 	DMA2_Stream7->CR &= ~(1 << 8);  //禁止循环模式
 	DMA2_Stream7->CR &= ~(3 << 6);   //置0
 	DMA2_Stream7->CR |= (1 << 6);	//存储器到外设

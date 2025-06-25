@@ -113,6 +113,7 @@ u8 USART1_RecvByte(void)
 	data = USART1->DR;
 	return data;
 }
+
 //接收一个字符串
 void USART1_RecvStr(u8* str)
 {
