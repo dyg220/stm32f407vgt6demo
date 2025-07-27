@@ -229,9 +229,14 @@
     <ClCompile Include="User\src\wwdg.c" />
   </ItemGroup>
   <ItemGroup>
+    <None Include=".gitignore" />
     <None Include="Cmsis\startup_stm32f40xx.s" />
     <None Include="keilkill.bat" />
     <None Include="Library\STM32F4xx_StdPeriph_Driver\Release_Notes.html" />
+    <None Include="README.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="Library\STM32F4xx_StdPeriph_Driver\LICENSE.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

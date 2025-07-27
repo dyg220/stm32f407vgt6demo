@@ -137,9 +137,6 @@ u8 Key_GetState(void)
 }
 
 
-
-
-
 void Key_Tick(void)
 {
 	static u32 Count = 0;

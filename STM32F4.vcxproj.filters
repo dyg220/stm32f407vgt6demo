@@ -465,5 +465,10 @@
     </None>
     <None Include="Library\STM32F4xx_StdPeriph_Driver\Release_Notes.html" />
     <None Include="Cmsis\startup_stm32f40xx.s" />
+    <None Include=".gitignore" />
+    <None Include="README.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="Library\STM32F4xx_StdPeriph_Driver\LICENSE.txt" />
   </ItemGroup>
 </Project>
